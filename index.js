@@ -87,5 +87,8 @@ app.post('/contact/send', (req, res) => {
 
 
 
-app.listen(5600);
-console.log('Server is Running On Port 5600...');
+const port = process.env.PORT || 5600;
+
+app.listen(port, () => {
+    console.log("Sample App is Running On The Port " + port);
+})
